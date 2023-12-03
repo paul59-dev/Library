@@ -14,6 +14,14 @@ public class User {
         this.listOfBorrowing = new ArrayList<>();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getUserId() {
+        return userID;
+    }
+
     // Emprunter un livre
     public void borrowingBook(Book book) {
         listOfBorrowing.add(book);

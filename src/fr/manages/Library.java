@@ -13,14 +13,35 @@ public class Library {
     }
     
     // Ajouter un livre
-    public void addBook() {}
-
-    // Supprimer un livre
-    public void deleteBook() {}
+    public void addBook(Book book) {
+        listOfBooks.add(book);
+    }
 
     // Ajouter un utilisateur
-    public void addUser() {}
+    public void addUser(User user) {
+        listOfUsers.add(user);
+        System.out.println("Utilisateur ajouté.");
+    }
 
-    // Supprimer un utilisateur
-    public void deleteUser() {}
+    // Affichier tout les livres de la library
+    public void showAllBooks() {
+        System.out.println("Liste des livres: ");
+
+        for(Book book: listOfBooks) {
+            System.out.println("*********************");
+            System.out.println("ISBN: " + book.getIsbn());
+            System.out.println("Titre: " + book.getTitle());
+            System.out.println("Autheur: " + book.getAuthor());
+        }
+    }
+
+    // Affichier tout les utilisateur inscrit
+    public void showAllUsers() {
+        System.out.println("Liste des utilisateurs: ");
+
+        for(User user: listOfUsers) {
+            System.out.println("*********************");
+            System.out.print("Nom: " + user.getName() + " - " + user.getUserId());
+        }
+    }
 }
